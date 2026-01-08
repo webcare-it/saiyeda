@@ -228,6 +228,29 @@
                 </div>
               </div>
             </div>
+            <div class="card shadow-none bg-light">
+                <div class="card-header">
+                    <h6 class="mb-0">{{ translate('Payment Methods Widget ') }}</h6>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>{{ translate('Payment Methods') }}</label>
+                        <div class="input-group" data-toggle="aizuploader" data-type="image">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text bg-soft-secondary font-weight-medium">{{ translate('Browse')}}</div>
+                            </div>
+                            <div class="form-control file-amount">{{ translate('Choose File') }}</div>
+                            <input type="hidden" name="types[]" value="payment_method_images">
+                            <input type="hidden" name="payment_method_images" class="selected-files" value="{{ get_setting('payment_method_images')}}">
+                        </div>
+                        <div class="file-preview box sm">
+                        </div>
+                    </div>
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary">{{ translate('Update') }}</button>
+                </div>
+            </div>
         </div>
     </form>
 </div>
